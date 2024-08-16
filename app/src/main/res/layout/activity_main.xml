@@ -5,15 +5,44 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_login_page"
     tools:context=".MainActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        style="@style/Lottie_InicialPage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_rawRes="@raw/sandwich"
+        app:layout_constraintBottom_toTopOf="@id/AppName"/>
+
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        style="@style/TextView_InicialPage"
+        android:id="@+id/AppName"
+        android:text="BiteExpress!"
+        android:textSize="35sp"
+        android:layout_marginVertical="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
+
+    <TextView
+        style="@style/TextView_InicialPage"
+        android:text="@string/sub_title"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/AppName"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        style="@style/Lottie_InicialPage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_rawRes="@raw/nextbtn_inicial_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/AppName"
+        app:lottie_loop="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
